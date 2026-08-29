@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-script: 'Alex Brush', cursive;
+
+  --color-ivory: #F8F9FA;
+  --color-onyx:  #0A0A0A;
+  
+  /* ── MONOCHROME / SILVER ACCENTS ── */
+  --color-gold:  #FFFFFF;         /* Primary Silver */
+  --color-gold-light: #F3F4F6;   /* Light Silver */
+  --color-gold-pale:  #EAECEE;    /* Pale Silver */
+  --color-gold-deep:  #D1D5DB;    /* Deep Silver */
+
+  --color-sage-50:  #F8F9FA;
+  --color-sage-100: #1D1D1D;
+  --color-sage-200: #2D2D2D;
+  --color-sage-300: #8D8D8D;
+  --color-sage-400: #C5C5C0;
+  --color-sage-500: #FFFFFF;
+  --color-sage-600: #D1D5DB;
+  --color-sage-700: #5C6269;
+  --color-sage-800: #3E4349;
+  --color-sage-900: #212529;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-spin-slow: spin 25s linear infinite;
+  --animate-fade-in: fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-down: fade-in-down 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-in: scale-in 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+}
+
+html { 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  margin: 0; padding: 0;
+  background-color: #0A0A0A;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  color: #F8F9FA;
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #333333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #666666; }
+::selection { background: #FFFFFF; color: #0A0A0A; }
+
+.text-silver-gradient {
+  background: linear-gradient(135deg, #E5E7EB 0%, #FFFFFF 50%, #9CA3AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: #FFFFFF !important;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F3F4F6 50%, #E5E7EB 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.95));
+  display: inline-block;
+  font-weight: 600;
+}
+
+.mono-card {
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.floral-overlay {
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* ── LUXURY SMOOTH SCROLL REVEAL SYSTEM ── */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+.reveal-up { transform: translate3d(0, 36px, 0) scale(0.97); }
+.reveal-scale { transform: scale(0.93) translate3d(0, 24px, 0); }
+.reveal-left { transform: translate3d(-36px, 0, 0) scale(0.97); }
+.reveal-right { transform: translate3d(36px, 0, 0) scale(0.97); }
+.reveal-active { opacity: 1 !important; transform: translate3d(0, 0, 0) scale(1) !important; }
+
+/* Custom scrollbar for wishes feed */
+.wishes-scroll-container::-webkit-scrollbar {
+  width: 5px;
+}
+.wishes-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+.wishes-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.20);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+.wishes-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.40);
+}
