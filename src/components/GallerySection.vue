@@ -28,7 +28,7 @@
             'reveal reveal-scale relative group overflow-hidden rounded-2xl md:rounded-3xl cursor-pointer border border-white/10 hover:border-white/30 shadow-2xl bg-neutral-900/90 transform-gpu',
             img.gridClass
           ]"
-          :style="{ transitionDelay: `${(idx % 4) * 90}ms` }"
+          :style="{ transitionDelay: `${(idx % 4) * 150}ms` }"
           @click="openLightbox(idx)"
         >
           <!-- Skeleton Loading Pulse Background -->
