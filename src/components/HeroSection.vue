@@ -14,7 +14,7 @@
     <!-- Main Container -->
     <div class="relative z-20 w-full max-w-4xl px-6 text-center flex flex-col items-center">
       <!-- Elegantly animated top divider -->
-      <div class="reveal reveal-up mb-6">
+      <div class="reveal reveal-up mb-6" style="transition-delay: 100ms">
         <span class="font-sans text-xs tracking-[0.4em] text-white uppercase font-semibold">
           THE WEDDING OF
         </span>
@@ -26,12 +26,12 @@
       </div>
 
       <!-- Main Heading: Syifa & Arief -->
-      <h2 class="reveal reveal-scale font-display text-6xl md:text-8xl font-light text-white tracking-[0.12em] md:tracking-[0.16em] leading-none select-none drop-shadow-lg">
+      <h2 class="reveal reveal-up font-display text-6xl md:text-8xl font-light text-white tracking-[0.12em] md:tracking-[0.16em] leading-none select-none drop-shadow-lg" style="transition-delay: 250ms">
         Syifa <span class="font-script text-5xl md:text-6xl text-white block md:inline my-2 md:my-0 md:mx-4">&</span> Arief
       </h2>
 
       <!-- Description Quote Wording Pill -->
-      <div class="reveal reveal-up mt-6 max-w-lg">
+      <div class="reveal reveal-up mt-6 max-w-lg" style="transition-delay: 400ms">
         <div class="bg-black/50 backdrop-blur-md border border-white/15 px-6 py-3.5 rounded-2xl shadow-xl">
           <p class="font-serif italic text-xs sm:text-sm text-neutral-200 leading-relaxed">
             "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri..."
@@ -40,7 +40,7 @@
       </div>
 
       <!-- Elegantly Framed Countdown Timer -->
-      <div class="reveal reveal-up w-full max-w-xl mt-10">
+      <div class="reveal reveal-up w-full max-w-xl mt-10" style="transition-delay: 550ms">
         <div class="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 mb-6">
           <p class="font-sans text-[11px] tracking-[0.3em] text-white uppercase font-semibold">
             Menuju Hari Bahagia
@@ -76,7 +76,7 @@
       </div>
 
       <!-- Scroll indicator arrow -->
-      <div class="reveal reveal-up mt-14 flex flex-col items-center space-y-2 pointer-events-none">
+      <div class="reveal reveal-up mt-14 flex flex-col items-center space-y-2 pointer-events-none" style="transition-delay: 700ms">
         <span class="font-sans text-[10px] tracking-[0.3em] uppercase text-neutral-400 font-light">Scroll ke bawah</span>
         <div class="w-6 h-10 border border-white/30 rounded-full flex justify-center p-1 relative">
           <div class="w-1.5 h-1.5 bg-white rounded-full animate-bounce"></div>
